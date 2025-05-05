@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart'; // Import your main chat screen
+import 'main.dart'; 
 
 class HomePage extends StatelessWidget {
   @override
@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Gradient background
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
