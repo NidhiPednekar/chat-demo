@@ -98,7 +98,7 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
           title: Row(
             children: [
               CircleAvatar(
-                backgroundImage: AssetImage('assets/stickers/community.webp'), // Add a topic image
+                backgroundImage: AssetImage('assets/stickers/community.webp'),
                 radius: 22,
               ),
               SizedBox(width: 12),
@@ -140,7 +140,6 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
       ),
       body: Stack(
         children: [
-          // Gradient background
           Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -150,13 +149,12 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
               ),
             ),
           ),
-          // Semi-transparent overlay
           Container(
             color: Colors.black.withOpacity(0.15),
           ),
           Column(
             children: [
-              SizedBox(height: 90), // For AppBar
+              SizedBox(height: 90),
               Expanded(
                 child: ListView.builder(
                   reverse: true,
@@ -173,7 +171,6 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
                   },
                 ),
               ),
-              // Predefined message chips
               Container(
                 height: 48,
                 margin: EdgeInsets.only(bottom: 4),
@@ -193,7 +190,6 @@ class _ChatRoomScreenState extends State<ChatRoomScreen> {
                   }).toList(),
                 ),
               ),
-              // Input bar
               _buildInputBar(context),
               if (_showEmojiPicker)
                 EmojiPicker(
