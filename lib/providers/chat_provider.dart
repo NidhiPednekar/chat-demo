@@ -9,7 +9,6 @@ class ChatProvider with ChangeNotifier {
     User(id: '1', name: 'You', avatarUrl: ''),
     User(id: '2', name: 'Alice', avatarUrl: ''),
     User(id: '3', name: 'Bob', avatarUrl: ''),
-    // Add more users if you want
   ];
 
   List<User> get users => _users;
@@ -41,7 +40,6 @@ class ChatProvider with ChangeNotifier {
 
   void _startRandomMessages() {
     _timer = Timer.periodic(Duration(seconds: 2), (_) {
-      // Pick a random user (not the current user)
       final user = _users[_random.nextInt(_users.length - 1) + 1];
       final text = _randomTexts[_random.nextInt(_randomTexts.length)];
       _messages.add(Message(
